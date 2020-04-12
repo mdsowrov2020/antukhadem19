@@ -1,0 +1,324 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section class="navbar">
+    <nav class="navbar navbar-expand-lg custom_nav " style="background-color: rgba(0,0,0,0.6);">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="{% static 'lib/images/maison.png' %}" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" aria-controls="mynav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      
+        <div class="collapse navbar-collapse" id="mynav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link active" href="{% url 'home' %}">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span style="margin-left: 2px;"><i class="fas fa-shopping-cart"></i></span></a>
+            </li>
+            
+            <li class="nav-item">
+                
+              </li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+</section>
+
+<!-- banner part -->
+<section>
+    <div class="container">
+        <div class="user_bg" style="background: url({% static 'lib/images/userbg.jpg' %});">
+          <div class="row banner_content">
+              <div class="col-md-12">
+                <div class="">
+                    <div class="search_part">
+                        <form action="" method="POST" class="search">
+                            {% csrf_token %}
+                            <input type="text" placeholder="search for products.." class="srch_input">
+                            <button type="submit" class="srch_btn"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                   </div>
+              </div>
+          </div>
+
+        </div>
+    </div>
+</section>
+<!-- featured part start -->
+
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-md-12 text-left">
+                <div class="user_header">
+                    <h2>feature product
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row feature_slider justify-content-center">
+            <div class="col-md-12 feature_image_hover">
+                <div class="feature_main">
+                    <div class="feature_images">
+                        <a href="#"><img src="{% static 'lib/images/switch.jpg' %}" alt=""></a>
+                        <div class="feature_overlay">
+                            <a href="#" class="buy_button">buy now</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-12 feature_image_hover">
+                <div class="feature_main">
+                    <div class="feature_images">
+                        <a href="#"><img src="{% static 'lib/images/wire.jpg' %}" alt=""></a>
+                        <div class="feature_overlay">
+                            <a href="#" class="buy_button">buy now</a>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-12 feature_image_hover">
+                <div class="feature_main">
+                    <div class="feature_images">
+                        <a href="#"><img src="{% static 'lib/images/brick.jpg' %}" alt=""></a>
+                        <div class="feature_overlay">
+                            <a href="#" class="buy_button">buy now</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-12 feature_image_hover">
+                <div class="feature_main">
+                    <div class="feature_images">
+                        <a href="#"><img src="{% static 'lib/images/fan.jpg' %}" alt=""></a>
+                        <div class="feature_overlay">
+                            <a href="#" class="buy_button">buy now</a>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-12 feature_image_hover">
+                <div class="feature_main">
+                    <div class="feature_images">
+                        <a href="#"><img src="{% static 'lib/images/cement.jpg' %}" alt=""></a>
+                        <div class="feature_overlay">
+                            <a href="#" class="buy_button">buy now</a>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- top deals part start -->
+<section class="mt-5">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-md-12 text-left">
+                <div class="user_header">
+                    <h2>SPECIAL DEALS
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-2 main_product">
+                <div class="main">
+                    <div class="main_image">
+                        <img src="{% static 'lib/images/sand.jpg' %}" alt="">
+                        <div class="overla_image">
+                            <a href="#" class="click"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="main_content">
+                        <p class="price_old">500tk</p>
+                        <p class="price_new">300tk</p>
+                        <button type="submit" class="btn btn-block btn-success ubtn">add to cart<span><i class="fas fa-shopping-cart"></i></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2 main_product">
+                <div class="main">
+                    <div class="main_image">
+                        <img src="{% static 'lib/images/brick.jpg' %}" alt="">
+                        <div class="overla_image">
+                            <a href="#" class="click"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="main_content">
+                        <p class="price_old">500tk</p>
+                        <p class="price_new">300tk</p>
+                        <button type="submit" class="btn btn-block btn-success ubtn">add to cart<span><i class="fas fa-shopping-cart"></i></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2 main_product">
+                <div class="main">
+                    <div class="main_image">
+                        <img src="{% static 'lib/images/cement.jpg' %}" alt="">
+                        <div class="overla_image">
+                            <a href="#" class="click"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="main_content">
+                        <p class="price_old">500tk</p>
+                        <p class="price_new">300tk</p>
+                        <button type="submit" class="btn btn-block btn-success ubtn">add to cart<span><i class="fas fa-shopping-cart"></i></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2 main_product">
+                <div class="main">
+                    <div class="main_image">
+                        <img src="{% static 'lib/images/fan.jpg' %}" alt="">
+                        <div class="overla_image">
+                            <a href="#" class="click"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="main_content">
+                        <p class="price_old">500tk</p>
+                        <p class="price_new">300tk</p>
+                        <button type="submit" class="btn btn-block btn-success ubtn">add to cart <span><i class="fas fa-shopping-cart"></i></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2 main_product">
+                <div class="main">
+                    <div class="main_image">
+                        <img src="{% static 'lib/images/sand.jpg' %}" alt="">
+                        <div class="overla_image">
+                            <a href="#" class="click"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="main_content">
+                        <p class="price_old">500tk</p>
+                        <p class="price_new">300tk</p>
+                        <button type="submit" class="btn btn-block btn-success ubtn">add to cart<span><i class="fas fa-shopping-cart"></i></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2 main_product">
+                <div class="main">
+                    <div class="main_image">
+                        <img src="{% static 'lib/images/brick.jpg' %}" alt="">
+                        <div class="overla_image">
+                            <a href="#" class="click"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="main_content">
+                        <p class="price_old">500tk</p>
+                        <p class="price_new">300tk</p>
+                        <button type="submit" class="btn btn-block btn-success ubtn">add to cart<span><i class="fas fa-shopping-cart"></i></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2 main_product">
+                <div class="main">
+                    <div class="main_image">
+                        <img src="{% static 'lib/images/cement.jpg' %}" alt="">
+                        <div class="overla_image">
+                            <a href="#" class="click"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="main_content">
+                        <p class="price_old">500tk</p>
+                        <p class="price_new">300tk</p>
+                        <button type="submit" class="btn btn-block btn-success ubtn">add to cart<span><i class="fas fa-shopping-cart"></i></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-2 main_product">
+                <div class="main">
+                    <div class="main_image">
+                        <img src="{% static 'lib/images/fan.jpg' %}" alt="">
+                        <div class="overla_image">
+                            <a href="#" class="click"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="main_content">
+                        <p class="price_old">500tk</p>
+                        <p class="price_new">300tk</p>
+                        <button type="submit" class="btn btn-block btn-success ubtn">add to cart <span><i class="fas fa-shopping-cart"></i></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Part start -->
+
+<section class="footer">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <p style="color: #fff; font-size: 14px;">Trade Alert - Delivering the latest product trends and industry news straight to your inbox.</p>
+          <form action="" method="POST">
+            <div class="form-input">
+              <input type="text" class="form-control" name="email" id="" placeholder="email@"> 
+               <button type="submit" class="btn-block mt-2 submitBtn">Send</button>
+  
+            </div>
+  
+          </form>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-2">
+        <div class="col-md-4 text-center footer_content">
+          <ul>
+            <li> <a href="#">Help center</a></li>
+            <li> <a href="#">Contact Us</a></li>
+            <li> <a href="#">Policies and rules</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center footer_content">
+          <ul>
+            <li> <a href="#">Help center</a></li>
+            <li> <a href="#">Contact Us</a></li>
+            <li> <a href="#">Policies and rules</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center footer_content">
+          <ul>
+            <li> <a href="#">Help center</a></li>
+            <li> <a href="#">Contact Us</a></li>
+            <li> <a href="#">Policies and rules</a></li>
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <div class="backto-top">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+{% endblock %}
